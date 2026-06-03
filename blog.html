@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Marc Canlas — Blog. Thoughts on frontend development, design, and the craft of building for the web." />
+        <title>Blog — Marc Canlas</title>
+
+        <link rel="icon" type="image/png" sizes="64x64" href="img/assets/logo.png">
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+
+        <!-- Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+        <script src="https://unpkg.com/lucide@latest"></script>
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="styles/style.css" />
+        <link rel="stylesheet" href="styles/blog.css" />
+    </head>
+
+    <body>
+        <div id="cursor"></div>
+        <div class="cursor-follower" id="follower"></div>
+
+        <div class="background-container">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+        </div>
+
+        <!-- NAVBAR -->
+        <header>
+            <nav class="navbar">
+                <div class="nav-container">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="img/assets/logo.png" alt="Marc Canlas Logo">
+                        </a>
+                    </div>
+
+                    <ul class="nav-links" id="nav-links">
+                        <li><a href="index.html#home" class="nav-item">
+                            <i class="fas fa-home"></i><span>Home</span>
+                        </a></li>
+                        <li><a href="index.html#about-split" class="nav-item">
+                            <i class="fas fa-user"></i><span>About</span>
+                        </a></li>
+                        <li><a href="projects.html" class="nav-item">
+                            <i class="fas fa-rocket"></i><span>Projects</span>
+                        </a></li>
+                        <li><a href="blog.html" class="nav-item active">
+                            <i class="fas fa-pen-nib"></i><span>Blog</span>
+                        </a></li>
+                        <li><a href="index.html#contact" class="nav-item">
+                            <i class="fas fa-envelope"></i><span>Contact</span>
+                        </a></li>
+                    </ul>
+
+                    <div class="hamburger" id="hamburger">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+            </nav>
+            <div class="mobile-overlay" id="mobile-overlay"></div>
+        </header>
+
+        <!-- BLOG HERO -->
+        <section class="blog-page-hero">
+            <div class="blog-page-hero-inner">
+                <a href="index.html#blog" class="blog-back-link">
+                    <i class="fas fa-arrow-left"></i> Back to Portfolio
+                </a>
+                <div class="blog-hero-eyebrow">SYSTEM / LOG_ENTRIES</div>
+                <h1 class="blog-hero-title">
+                    > Blog_ <span class="highlight">Archive</span>
+                </h1>
+                <p class="blog-hero-sub">Thoughts on frontend engineering, UI craft, and the process of building for the web.</p>
+
+                <div class="blog-filter-row">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="UI/UX">UI/UX</button>
+                    <button class="filter-btn" data-filter="Frontend">Frontend</button>
+                    <button class="filter-btn" data-filter="Process">Process</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOG POSTS GRID -->
+        <section class="blog-all-posts">
+            <div class="blog-page-container">
+
+                <div class="blog-post-count"><span id="postCount">2</span> entries loaded</div>
+
+                <div class="blog-all-grid" id="blogGrid">
+
+                    <article class="blog-full-card" data-category="Process">
+                        <div class="bfc-top">
+                            <div class="blog-card-meta">
+                                <span class="blog-tag">Process</span>
+                                <span class="blog-date">May 2026</span>
+                            </div>
+                            <h2 class="bfc-title">My Journey as an IT Web Developer</h2>
+                            <p class="bfc-excerpt">From a boarding house room and a blank Python file, to building full websites — a personal account of how it all started in 2023 and where it's taken me since.</p>
+                        </div>
+                        <div class="bfc-bottom">
+                            <div class="bfc-tags">
+                                <code>Journey</code>
+                                <code>Web Dev</code>
+                                <code>Personal</code>
+                            </div>
+                            <a href="blog/blog-my-journey.html" class="bfc-link">
+                                Read Entry <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="blog-full-card" data-category="UI/UX">
+                        <div class="bfc-top">
+                            <div class="blog-card-meta">
+                                <span class="blog-tag">UI/UX</span>
+                                <span class="blog-date">May 2026</span>
+                            </div>
+                            <h2 class="bfc-title">The Way I Design: Picky, Patient, and Always Revising</h2>
+                            <p class="bfc-excerpt">Hours of hunting for the right reference, dozens of revisions, and a slow drift toward darker tones — a look at what my real design process looks like and how it's evolved over the years.</p>
+                        </div>
+                        <div class="bfc-bottom">
+                            <div class="bfc-tags">
+                                <code>Design</code>
+                                <code>Process</code>
+                                <code>Personal</code>
+                            </div>
+                            <a href="blog/blog-design-process.html" class="bfc-link">
+                                Read Entry <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Empty state -->
+                <div class="blog-empty-state" id="emptyState" style="display:none;">
+                    <i class="fas fa-folder-open"></i>
+                    <p>No entries found in this category.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer-section">
+            <div class="footer-container">
+                <div class="footer-cta">
+                    <p class="cta-subtitle">WHAT'S NEXT?</p>
+                    <h2 class="cta-title">
+                        Let's build something <br>
+                        <span class="gradient-text">legendary together.</span>
+                    </h2>
+                    <a href="mailto:m4canlas@gmail.com" class="email-link">
+                        m4canlas@gmail.com <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+
+                <hr class="footer-divider">
+
+                <div class="footer-bottom">
+                    <div class="footer-nav">
+                        <a href="index.html#home">Home</a>
+                        <a href="index.html#about-split">About</a>
+                        <a href="index.html#portfolio">Projects</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="index.html#contact">Contact</a>
+                    </div>
+                    <div class="footer-socials">
+                        <a href="https://github.com/TheCanlasArchive" class="social-circle"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/marc-ordonez-canlas-a34320311/" class="social-circle"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/marcordonez.canlas.906" class="social-circle"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-info">
+                    <p class="copyright">© 2026 Marc O. Canlas</p>
+                </div>
+            </div>
+
+            <a href="javascript:void(0)" class="scroll-top" id="scrollTopBtn">
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+        </footer>
+
+        <script src="js/script.js"></script>
+        <script>
+            // Filter logic
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const cards = document.querySelectorAll('.blog-full-card');
+            const countEl = document.getElementById('postCount');
+            const emptyEl = document.getElementById('emptyState');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filter = btn.dataset.filter;
+                    let visible = 0;
+
+                    cards.forEach(card => {
+                        const match = filter === 'all' || card.dataset.category === filter;
+                        card.style.display = match ? '' : 'none';
+                        if (match) visible++;
+                    });
+
+                    countEl.textContent = visible;
+                    emptyEl.style.display = visible === 0 ? 'flex' : 'none';
+                });
+            });
+        </script>
+    </body>
+</html>

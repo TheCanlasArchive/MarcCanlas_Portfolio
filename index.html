@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- Meta -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Frontend Developer Portfolio - Building innovative and user-friendly digital solutions." />
+        <title>Frontend Developer Portfolio</title>
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" sizes="64x64" href="img/assets/logo.png">
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+
+        <!-- Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+        <script src="https://unpkg.com/lucide@latest"></script>
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="styles/style.css" />
+    </head>
+
+    <body>
+        <div id="cursor"></div>
+        <div class="cursor-follower" id="follower"></div>
+
+        <div class="background-container">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+        </div>
+
+        <!-- ================= NAVBAR ================= -->
+        <header>
+            <nav class="navbar">
+                <div class="nav-container">
+
+                    <div class="logo">
+                        <a href="#home">
+                            <img src="img/assets/logo.png" alt="Marc Canlas Logo">
+                        </a>
+                    </div>
+
+                    <ul class="nav-links" id="nav-links">
+
+                        <li><a href="#home" class="nav-item active">
+                            <i class="fas fa-home"></i><span>Home</span>
+                        </a></li>
+
+                        <li><a href="#about-split" class="nav-item">
+                            <i class="fas fa-user"></i><span>About</span>
+                        </a></li>
+
+                        <li><a href="#portfolio" class="nav-item">
+                            <i class="fas fa-rocket"></i><span>Projects</span>
+                        </a></li>
+
+                        <li><a href="#blog" class="nav-item">
+                            <i class="fas fa-pen-nib"></i><span>Blog</span>
+                        </a></li>
+
+                        <li><a href="#contact" class="nav-item">
+                            <i class="fas fa-envelope"></i><span>Contact</span>
+                        </a></li>
+                    </ul>
+
+                    <button class="nav-cta" id="openModal">
+                        Let’s Connect
+                    </button>
+
+                    <!-- Hamburger -->
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                </div>
+            </nav>
+            <div class="mobile-overlay" id="mobile-overlay"></div>
+        </header>
+
+        <div class="modal-overlay" id="modal">
+            <div class="modal">
+                <button class="close-btn" id="closeModal">&times;</button>
+
+                <h2>Internship Inquiry</h2>
+                <p class="modal-sub">
+                    Interested in offering me an internship opportunity? Let’s connect.
+                </p>
+
+                <form id="internshipForm">
+                    <div class="input-group">
+                        <input type="text" id="modal-name" name="name" placeholder=" " required autocomplete="name">
+                        <label for="modal-name">Your Name</label>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="email" id="modal-email" name="email" placeholder=" " required autocomplete="email">
+                        <label for="modal-email">Your Email</label>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="text" id="modal-company" name="company" placeholder=" " autocomplete="organization">
+                        <label for="modal-company">Company Name</label>
+                    </div>
+
+                    <div class="input-group">
+                        <textarea id="modal-message" name="message" rows="4" placeholder=" " required></textarea>
+                        <label for="modal-message">Message</label>
+                    </div>
+
+                    <!-- modal -->
+                    <input type="hidden" name="_subject" value="New Internship Inquiry">
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+
+                <p id="modalStatus" style="margin-top:15px; font-size:14px;"></p>
+            </div>
+        </div>
+
+        <!-- ================= HERO ================= -->
+        <main id="home" class="container">
+
+            <section class="content">
+
+                <div class="badge">
+                    <i data-lucide="sparkles"></i>
+                    <span>Ready to Innovate</span>
+                </div>
+
+                <!-- PRIMARY TITLE -->
+                <h1>
+                    > Welcome_ <span class="highlight">Marc Canlas</span>
+                </h1>
+
+                <!-- ROLE -->
+                <h2 class="sub-headline">
+                    <span id="typing-text"></span><span class="cursor">|</span>
+                </h2>
+
+                <!-- DESCRIPTION -->
+                <p class="description">
+                    I’m a Frontend Developer with a strong eye for UI design, building clean, responsive, and user-centered web experiences. 
+                    I transform ideas into functional digital interfaces using modern web technologies.
+                </p>
+
+                <!-- TAGS -->
+                <div class="tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Angular</span>
+                </div>
+
+                <!-- BUTTONS -->
+                <div class="btn-group">
+                    <a href="#portfolio" class="btn btn-primary">
+                        Projects <i data-lucide="external-link"></i>
+                    </a>
+                    <a href="https://github.com/TheCanlasArchive" class="btn btn-secondary">
+                        Github <i data-lucide="github"></i>
+                    </a>
+
+            </section>
+
+            <section class="illustration">
+                <div class="art-container">
+                    
+                    <div class="tv-screen">
+                        <img id="project-preview" src="project1.jpg" alt="Project Preview">
+
+                        <div class="project-overlay">
+                            <h3 id="project-title">Project One</h3>
+                            <a id="project-link" href="#" target="_blank">View Project →</a>
+                        </div>
+
+                        <div class="screen-glow"></div>
+                    </div>
+
+                    <div class="floating-icon html"><span>HTML</span></div>
+                    <div class="floating-icon css"><span>CSS</span></div>
+                    <div class="floating-icon js"><span>JS</span></div>
+
+                </div>
+            </section>
+
+        </main>
+
+    <!-- ================= ABOUT SECTION ================= -->
+    <section id="about-split" class="about-section">
+        <div class="about-inner">
+
+            <!-- Left: Photo + quick facts -->
+            <div class="about-photo-col">
+                <div class="about-photo-wrap">
+                    <img src="img/assets/profile.png" alt="Marc Canlas" class="about-photo">
+                    <div class="about-location-pill">
+                        <i class="fas fa-map-marker-alt"></i> Angeles City, Philippines
+                    </div>
+                </div>
+
+                <div class="about-quick-facts">
+                    <div class="quick-fact">
+                        <span class="qf-num">6</span>
+                        <span class="qf-label">Projects built</span>
+                    </div>
+                    <div class="quick-fact-divider"></div>
+                    <div class="quick-fact">
+                        <span class="qf-num">4</span>
+                        <span class="qf-label">Certifications earned</span>
+                    </div>
+                    <div class="quick-fact-divider"></div>
+                    <div class="quick-fact">
+                        <span class="qf-num">3+</span>
+                        <span class="qf-label">Years learning &amp; building</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Story + skills + CTA -->
+            <div class="about-content-col">
+
+                <p class="about-eyebrow">A little about me</p>
+                <h2 class="about-heading">Designing interfaces that people actually enjoy using.</h2>
+
+                <div class="about-bio">
+                    <p>
+                        I'm Marc, a frontend developer and Information Technology student from Angeles City. I specialize in building responsive and accessible web interfaces that balance visual design with practical functionality.
+                    </p>
+                    <p>
+                        My primary focus is frontend development, where I enjoy transforming concepts into engaging user experiences. Alongside this, I continue developing my knowledge of PHP, Angular, and Vue.js to gain a deeper understanding of full web application workflows and backend integration.
+                    </p>
+                    <p>
+                        I am also passionate about UI/UX and digital design, often contributing to the visual direction of projects through interface design, user-centered thinking, and creative problem-solving. Whether refining user journeys, designing layouts, or developing visual assets, I value the role of design in creating experiences that are both functional and memorable.
+                    </p>
+                </div>
+
+                <!-- Skills — grouped, readable -->
+                <div class="about-skills">
+                    <div class="skill-group">
+                        <span class="skill-group-label">Frontend</span>
+                        <div class="skill-tags">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Angular</span>
+                            <span class="skill-tag">Vue.JS</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <span class="skill-group-label">Design &amp; Tools</span>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">Git / GitHub</span>
+                            <span class="skill-tag">Wordpress</span>
+                            <span class="skill-tag">Responsive Design</span>
+                            <span class="skill-tag">Canva</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <span class="skill-group-label">Backend & Database</span>
+                        <div class="skill-tags">
+                            <span class="skill-tag">PHP</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Express.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTAs -->
+                <div class="about-cta-row">
+                    <a href="img/assets/marc_canlas_resume.pdf" class="about-btn about-btn-primary" download>
+                        Download Resume <i class="fas fa-download"></i>
+                    </a>
+                    <a href="profile.html" class="about-btn about-btn-ghost">
+                        View Certificates
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PROJECT SECTION ================= -->
+    <section class="works-manifest" id="portfolio">
+        <div class="manifest-container">
+            
+            <header class="manifest-header">
+                <h2 class="manifest-title">Featured <span> Works</span></h2>
+            </header>
+
+            <div class="manifest-workspace">
+                <div class="manifest-nav-block">
+                    
+                    <div class="project-batch active" id="batch-1">
+                        
+                        <div class="project-card active manifest-row" data-img="img-1">
+                            <div class="row-lead-group">
+                                <span class="manifest-id">01 / CASE_STUDY</span>
+                                <h3><a href="projects/project-aurumelle.html" class="manifest-anchor">Aurumelle_Pastries</a></h3>
+                            </div>
+                            <div class="row-mid-group">
+                                <span class="manifest-label">Category</span>
+                                <p class="manifest-desc">Fullstack E-Commerce</p>
+                            </div>
+                            <div class="row-end-group">
+                                <span class="manifest-label">Tech Stack</span>
+                                <div class="manifest-badge-box">
+                                    <code>PHP</code>
+                                    <code>MySQL</code>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card manifest-row" data-img="img-2">
+                            <div class="row-lead-group">
+                                <span class="manifest-id">02 / CASE_STUDY</span>
+                                <h3><a href="projects/project-bossrich.html" class="manifest-anchor">Bossrich Portfolio</a></h3>
+                            </div>
+                            <div class="row-mid-group">
+                                <span class="manifest-label">Category</span>
+                                <p class="manifest-desc">Branding & SEO Architecture</p>
+                            </div>
+                            <div class="row-end-group">
+                                <span class="manifest-label">Tech Stack</span>
+                                <div class="manifest-badge-box">
+                                    <code>WordPress</code>
+                                    <code>SEO</code>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card manifest-row" data-img="img-3">
+                            <div class="row-lead-group">
+                                <span class="manifest-id">03 / CASE_STUDY</span>
+                                <h3><a href="projects/project-singku.html" class="manifest-anchor">Singku Inspired</a></h3>
+                            </div>
+                            <div class="row-mid-group">
+                                <span class="manifest-label">Category</span>
+                                <p class="manifest-desc">Brand-Driven Web Platform</p>
+                            </div>
+                            <div class="row-end-group">
+                                <span class="manifest-label">Tech Stack</span>
+                                <div class="manifest-badge-box">
+                                    <code>HTML5</code>
+                                    <code>CSS Grid</code>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="project-batch" id="batch-2">
+                        
+                        <div class="project-card manifest-row" data-img="img-4">
+                            <div class="row-lead-group">
+                                <span class="manifest-id">04 / CASE_STUDY</span>
+                                <h3><a href="projects/project-earthhaven.html" class="manifest-anchor">EarthHaven Organics</a></h3>
+                            </div>
+                            <div class="row-mid-group">
+                                <span class="manifest-label">Category</span>
+                                <p class="manifest-desc">Product Catalog UI</p>
+                            </div>
+                            <div class="row-end-group">
+                                <span class="manifest-label">Tech Stack</span>
+                                <div class="manifest-badge-box">
+                                    <code>Angular</code>
+                                    <code>Bootstrap</code>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card manifest-row" data-img="img-5">
+                            <div class="row-lead-group">
+                                <span class="manifest-id">05 / CASE_STUDY</span>
+                                <h3><a href="projects/project-panlasa.html" class="manifest-anchor">PanlasaTrip </a></h3>
+                            </div>
+                            <div class="row-mid-group">
+                                <span class="manifest-label">Category</span>
+                                <p class="manifest-desc">Publishing & Blog Architecture</p>
+                            </div>
+                            <div class="row-end-group">
+                                <span class="manifest-label">Tech Stack</span>
+                                <div class="manifest-badge-box">
+                                    <code>WordPress</code>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card manifest-row" data-img="img-6">
+                            <div class="row-lead-group">
+                                <span class="manifest-id">06 / CASE_STUDY</span>
+                                <h3><a href="projects/project-payastreet.html" class="manifest-anchor">PayaStreet</a></h3>
+                            </div>
+                            <div class="row-mid-group">
+                                <span class="manifest-label">Category</span>
+                                <p class="manifest-desc">Brand-Driven Web Platform</p>
+                            </div>
+                            <div class="row-end-group">
+                                <span class="manifest-label">Tech Stack</span>
+                                <div class="manifest-badge-box">
+                                    <code>HTML5/CSS3</code>
+                                    <code>Node.js</code>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="project-batch" id="batch-3">
+
+                        <div class="project-card manifest-row" data-img="img-7">
+                            <div class="row-lead-group">
+                                <span class="manifest-id">07 / CASE_STUDY</span>
+                                <h3><a href="projects/project-aningkabalen.html" class="manifest-anchor">AningKabalen</a></h3>
+                            </div>
+                            <div class="row-mid-group">
+                                <span class="manifest-label">Category</span>
+                                <p class="manifest-desc">Digital Marketplace</p>
+                            </div>
+                            <div class="row-end-group">
+                                <span class="manifest-label">Tech Stack</span>
+                                <div class="manifest-badge-box">
+                                    <code>Angular</code>
+                                    <code>MongoDB</code>
+                                    <code>Express.js</code>
+                                    <code>Node.js</code>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="manifest-controls">
+                        <button class="m-ctrl-btn" id="prevProj"><i class="fas fa-long-arrow-alt-left"></i> Preview</button>
+                        <button class="m-ctrl-btn" id="nextProj">Next <i class="fas fa-long-arrow-alt-right"></i></button>
+                        <a href="projects.html" class="m-ctrl-btn m-ctrl-view-all">View All Projects <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                </div>
+
+                <div class="main-visual-container">
+                    <div class="visual-inner">
+                        <img src="img/aurumelle_img/header.png" class="bg-img active" id="img-1" alt="Aurumelle_Pastries">
+                        <img src="img/bossrich_img/bossrich.png" class="bg-img" id="img-2" alt="Bossrich">
+                        <img src="img/singku_img/header.png" class="bg-img" id="img-3" alt="Singku Inspired">
+                        <img src="img/earthhaven_img/earthhaven_organics.png" class="bg-img" id="img-4" alt="EarthHaven Organics">
+                        <img src="img/panlasa_trip/header.png" class="bg-img" id="img-5" alt="Panlasa Trip">
+                        <img src="img/payastreet_img/payastreet.png" class="bg-img" id="img-6" alt="Paya Street">
+                        <img src="img/aningkabalen_img/header.png" class="bg-img" id="img-7" alt="Aning Kabalen">
+                        <div class="overlay-vignette"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+        <!-- ================= BLOG SECTION ================= -->
+        <section class="blog-manifest" id="blog">
+            <div class="blog-manifest-container">
+
+                <header class="manifest-header">
+                    <h2 class="manifest-title">Latest <span>Writings</span></h2>
+                </header>
+
+                <div class="blog-grid">
+
+                    <article class="blog-card">
+                        <div class="blog-card-meta">
+                            <span class="blog-tag">Process</span>
+                            <span class="blog-date">March 2026</span>
+                        </div>
+                        <h3 class="blog-card-title">My Journey as an IT Web Developer</h3>
+                        <p class="blog-card-excerpt">From a boarding house room and a blank Python file, to building full websites — a personal account of how it all started in 2023 and where it's taken me since.</p>
+                        <a href="blog/blog-my-journey.html" class="blog-read-link">Read Entry <i class="fas fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="blog-card-meta">
+                            <span class="blog-tag">UI/ UX</span>
+                            <span class="blog-date">March 2026</span>
+                        </div>
+                        <h3 class="blog-card-title">The Way I Design: Picky, Patient, and Always Revising</h3>
+                        <p class="blog-card-excerpt">Hours of hunting for the right reference, dozens of revisions, and a slow drift toward darker tones — a look at what my real design process looks like and how it's evolved over the years.</p>
+                        <a href="blog/blog-design-process.html" class="blog-read-link">Read Entry <i class="fas fa-arrow-right"></i></a>
+                    </article>
+
+                </div>
+
+                <div class="blog-footer-row">
+                    <a href="blog.html" class="blog-more-btn">
+                        <span>View All Posts</span>
+                        <i class="fas fa-long-arrow-alt-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= TESTIMONIALS SECTION ================= -->
+        <section class="testimonials-section" id="testimonials">
+            <div class="container">
+                <div class="portfolio-header">
+                    <h2 class="section-title">Building Together: <span class="highlight">Success Stories</span></h2>
+                </div>
+
+                <div class="wall-viewport">
+                    <div class="marquee-track row-left" id="track1">
+                        <div class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="content">"Marc builds clean, functional code. His work on the Paya Street engine shows he can handle the full lifecycle of a web app, from server setup to UI."</p>
+                            <div class="footer">
+                                <div class="avatar">SG</div>
+                                <div class="info"><h4>Samantha Wayne Gonzales</h4><p>Fellow Collaborator</p></div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="content">"Effectively customized WordPress to create a structured, content-heavy photography blog. Marc showed a clear understanding of content taxonomy, SEO, and organized media delivery."</p>
+                            <div class="footer">
+                                <div class="avatar">AM</div>
+                                <div class="info"><h4>Aimee Pangan</h4><p>Fellow Team Member</p></div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="content">"Expertly handled the CMS architecture to organize a large volume of culinary content. Marc’s implementation of custom taxonomies and SEO-friendly structures makes the platform both easy to manage and easy to find."</p>
+                            <div class="footer">
+                                <div class="avatar">JL</div>
+                                <div class="info"><h4>Joyze Magat</h4><p>Fellow Team Member</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="marquee-track row-right" id="track2">
+                        <div class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="content">"Marc shows a strong grasp of modern framework logic. His work with Angular goes beyond just visuals; he implements clean component structures and ensures everything is stable with unit testing."</p>
+                            <div class="footer">
+                                <div class="avatar">MT</div>
+                                <div class="info"><h4>Joemar Catipon</h4><p>Project Collaborator</p></div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="content">"Marc is a focused developer who delivers. He understands the technical requirements of an e-commerce site, like order tracking and database management."</p>
+                            <div class="footer">
+                                <div class="avatar">JJ</div>
+                                <div class="info"><h4>James Jethro Dizon</h4><p>Team Member</p></div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="content">"The focus was on a simple, effective shopping experience. Marc implemented a smooth ordering flow and a clean UI that represents the brand perfectly without overcomplicating things."</p>
+                            <div class="footer">
+                                <div class="avatar">GG</div>
+                                <div class="info"><h4>Gab Gaerlan</h4><p>Team Meber</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CONTACT SECTION ================= -->
+        <section id="contact" class="contact-hub">
+            <div class="contact-ambient"></div>
+            <div class="hub-container">
+                <aside class="hub-sidebar">
+                    <div class="contact-eyebrow">
+                        <span class="eyebrow-line"></span> Get in touch
+                    </div>
+                    <h2 class="sidebar-title">Let's Start <br><span class="sidebar-title-accent">a Project.</span></h2>
+                    <p class="sidebar-desc">I'm available for freelance projects and technical collaborations. Let's align our goals and build something worth shipping.</p>
+
+                    <ul class="contact-details">
+                        <li>
+                            <span class="contact-icon-wrap"><i class="fa-solid fa-location-dot"></i></span>
+                            Angeles City, Philippines
+                        </li>
+                        <li onclick="copyEmail()" style="cursor:pointer;" title="Click to copy">
+                            <span class="contact-icon-wrap"><i class="fa-regular fa-envelope"></i></span>
+                            <span id="email-text">m4canlas@gmail.com</span>
+                        </li>
+                    </ul>
+                </aside>
+
+                <main class="hub-form-wrapper">
+                    <form id="contactFormMain" class="pro-form">
+                        <div class="form-row">
+                            <div class="field-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="field-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="john@company.com" required>
+                            </div>
+                        </div>
+
+                        <div class="field-group">
+                            <label for="service">Interested In</label>
+                            <select id="service" name="service" required>
+                                <option value="" disabled selected>Select a service...</option>
+                                <option>UI/UX Design</option>
+                                <option>Frontend Engineering</option>
+                                <option>Full-Stack Project</option>
+                                <option>Web Performance</option>
+                                <option>Technical Consultation</option>
+                            </select>
+                        </div>
+
+                        <div class="field-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="How can I help you today?" rows="5" required></textarea>
+                        </div>
+
+                        <div class="form-footer-row">
+                            <button type="submit" class="pro-submit">
+                                Send Request <i class="fa-solid fa-arrow-right-long"></i>
+                            </button>
+                            <p id="formStatus" class="form-status-msg"></p>
+                        </div>
+                    </form>
+                </main>
+            </div>
+        </section>
+
+        <!-- ================= FOOTER ================= -->
+        <footer class="footer-section">
+            <div class="footer-glow-right"></div>
+            <div class="footer-container">
+
+                <!-- Scrolling ticker -->
+                <div class="footer-ticker">
+                    <div class="ticker-track">
+                        <span class="ticker-item">Web Design <span class="ticker-dot"></span></span>
+                        <span class="ticker-item">Frontend Dev <span class="ticker-dot"></span></span>
+                        <span class="ticker-item">UI / UX <span class="ticker-dot"></span></span>
+                        <span class="ticker-item">Full-Stack <span class="ticker-dot"></span></span>
+                        <span class="ticker-item">Angeles City, PH <span class="ticker-dot"></span></span>
+                        <span class="ticker-item">Open to Freelance <span class="ticker-dot"></span></span>
+                        <span class="ticker-item">Web Design <span class="ticker-dot"></span></span>
+                        <span class="ticker-item">Frontend Dev <span class="ticker-dot"></span></span>
+                        <span class="ticker-item">UI / UX <span class="ticker-dot"></span></span>
+                        <span class="ticker-item">Full-Stack <span class="ticker-dot"></span></span>
+                        <span class="ticker-item">Angeles City, PH <span class="ticker-dot"></span></span>
+                        <span class="ticker-item">Open to Freelance <span class="ticker-dot"></span></span>
+                    </div>
+                </div>
+
+                <div class="footer-cta">
+                    <p class="cta-subtitle">WHAT'S NEXT?</p>
+                    <h2 class="cta-title">
+                        Let's build something <br>
+                        <span class="gradient-text">legendary together.</span>
+                    </h2>
+                    <a href="mailto:m4canlas@gmail.com" class="email-link">
+                        m4canlas@gmail.com <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+
+                <hr class="footer-divider">
+
+                <div class="footer-bottom">
+                    <div class="footer-nav">
+                        <a href="#home">Home</a>
+                        <a href="#about-split">About</a>
+                        <a href="#portfolio">Projects</a>
+                        <a href="#blog">Blog</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+
+                    <div class="footer-socials">
+                        <a href="https://github.com/TheCanlasArchive" class="social-circle" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/marc-ordonez-canlas-a34320311/" class="social-circle" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/marcordonez.canlas.906" class="social-circle" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-info">
+                    <p class="copyright">© 2026 Marc O. Canlas — Built with care in Angeles City.</p>
+                    <div class="online-status">
+                        <span class="status-dot"></span>
+                        <span>Available for work</span>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#home" class="scroll-top" id="scrollTopBtn">
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+        </footer>
+        <script src="js/script.js"></script>
+
+    </body>
+</html>

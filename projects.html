@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Marc Canlas — Projects. A full archive of web design and development work." />
+        <title>Projects — Marc Canlas</title>
+
+        <link rel="icon" type="image/png" sizes="64x64" href="img/assets/logo.png">
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+
+        <!-- Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+        <script src="https://unpkg.com/lucide@latest"></script>
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="styles/style.css" />
+        <link rel="stylesheet" href="styles/blog.css" />
+        <link rel="stylesheet" href="styles/projects-page.css" />
+    </head>
+
+    <body>
+        <div id="cursor"></div>
+        <div class="cursor-follower" id="follower"></div>
+
+        <div class="background-container">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+        </div>
+
+        <!-- NAVBAR -->
+        <header>
+            <nav class="navbar">
+                <div class="nav-container">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="img/assets/logo.png" alt="Marc Canlas Logo">
+                        </a>
+                    </div>
+
+                    <ul class="nav-links" id="nav-links">
+                        <li><a href="index.html#home" class="nav-item">
+                            <i class="fas fa-home"></i><span>Home</span>
+                        </a></li>
+                        <li><a href="index.html#about-split" class="nav-item">
+                            <i class="fas fa-user"></i><span>About</span>
+                        </a></li>
+                        <li><a href="projects.html" class="nav-item active">
+                            <i class="fas fa-rocket"></i><span>Projects</span>
+                        </a></li>
+                        <li><a href="blog.html" class="nav-item">
+                            <i class="fas fa-pen-nib"></i><span>Blog</span>
+                        </a></li>
+                        <li><a href="index.html#contact" class="nav-item">
+                            <i class="fas fa-envelope"></i><span>Contact</span>
+                        </a></li>
+                    </ul>
+
+                    <div class="hamburger" id="hamburger">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+            </nav>
+            <div class="mobile-overlay" id="mobile-overlay"></div>
+        </header>
+
+        <!-- PROJECTS HERO -->
+        <section class="blog-page-hero">
+            <div class="blog-page-hero-inner">
+                <a href="index.html#portfolio" class="blog-back-link">
+                    <i class="fas fa-arrow-left"></i> Back to Portfolio
+                </a>
+                <div class="blog-hero-eyebrow">SYSTEM / PROJECT_MANIFEST</div>
+                <h1 class="blog-hero-title">
+                    > Projects_ <span class="highlight">Archive</span>
+                </h1>
+                <p class="blog-hero-sub">A full index of web design and development work — from fullstack engines to static UI explorations.</p>
+
+                <div class="blog-filter-row">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="Fullstack">Fullstack</button>
+                    <button class="filter-btn" data-filter="WordPress">WordPress</button>
+                    <button class="filter-btn" data-filter="Frontend">Frontend</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ALL PROJECTS GRID -->
+        <section class="blog-all-posts">
+            <div class="blog-page-container">
+
+                <div class="blog-post-count"><span id="projectCount">6</span> projects loaded</div>
+
+                <div class="projects-all-grid" id="projectsGrid">
+
+                    <article class="proj-full-card" data-category="Fullstack">
+                        <div class="pfc-preview">
+                            <img src="img/aurumelle_img/header.png" alt="Aurumelle Pastries preview">
+                            <div class="pfc-id">01 / Case_Study</div>
+                        </div>
+                        <div class="pfc-body">
+                            <div class="pfc-top">
+                                <div class="blog-card-meta">
+                                    <span class="blog-tag">Fullstack</span>
+                                    <span class="blog-date">2024</span>
+                                </div>
+                                <h2 class="bfc-title">Aurumelle_Pastries</h2>
+                                <p class="bfc-excerpt">A fullstack e-commerce engine built end-to-end — from database schema to frontend components. Covers product management, cart logic, and admin authentication.</p>
+                            </div>
+                            <div class="bfc-bottom">
+                                <div class="bfc-tags">
+                                    <code>PHP</code>
+                                    <code>MySQL</code>
+                                </div>
+                                <a href="projects/project-aurumelle.html" class="bfc-link">
+                                    View Project <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="proj-full-card" data-category="WordPress">
+                        <div class="pfc-preview">
+                            <img src="img/bossrich_img/bossrich.png" alt="Bossrich Portfolio preview">
+                            <div class="pfc-id">02 / Case_Study</div>
+                        </div>
+                        <div class="pfc-body">
+                            <div class="pfc-top">
+                                <div class="blog-card-meta">
+                                    <span class="blog-tag">WordPress</span>
+                                    <span class="blog-date">2026</span>
+                                </div>
+                                <h2 class="bfc-title">Bossrich Portfolio</h2>
+                                <p class="bfc-excerpt">Branding and SEO architecture for a personal portfolio. Custom WordPress theme with structured metadata, performance optimization, and on-brand visual language.</p>
+                            </div>
+                            <div class="bfc-bottom">
+                                <div class="bfc-tags">
+                                    <code>WordPress</code>
+                                    <code>SEO</code>
+                                </div>
+                                <a href="projects/project-bossrich.html" class="bfc-link">
+                                    View Project <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="proj-full-card" data-category="Frontend">
+                        <div class="pfc-preview">
+                            <img src="img/singku_img/header.png" alt="Singku Inspired preview">
+                            <div class="pfc-id">03 / Case_Study</div>
+                        </div>
+                        <div class="pfc-body">
+                            <div class="pfc-top">
+                                <div class="blog-card-meta">
+                                    <span class="blog-tag">Frontend</span>
+                                    <span class="blog-date">2025</span>
+                                </div>
+                                <h2 class="bfc-title">Singku Inspired</h2>
+                                <p class="bfc-excerpt">A brand-driven web platform exploring CSS Grid layout techniques, responsive behavior, and interactive UI patterns without any framework overhead.</p>
+                            </div>
+                            <div class="bfc-bottom">
+                                <div class="bfc-tags">
+                                    <code>HTML5</code>
+                                    <code>CSS Grid</code>
+                                </div>
+                                <a href="projects/project-singku.html" class="bfc-link">
+                                    View Project <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="proj-full-card" data-category="Frontend">
+                        <div class="pfc-preview">
+                            <img src="img/earthhaven_img/earthhaven_organics.png" alt="EarthHaven Organics preview">
+                            <div class="pfc-id">04 / Case_Study</div>
+                        </div>
+                        <div class="pfc-body">
+                            <div class="pfc-top">
+                                <div class="blog-card-meta">
+                                    <span class="blog-tag">Frontend</span>
+                                    <span class="blog-date">2025</span>
+                                </div>
+                                <h2 class="bfc-title">EarthHaven Organics</h2>
+                                <p class="bfc-excerpt">A product catalog UI core built with Angular and Bootstrap. Focused on component architecture, data binding patterns, and a clean admin-facing UI for organic product listings.</p>
+                            </div>
+                            <div class="bfc-bottom">
+                                <div class="bfc-tags">
+                                    <code>Angular</code>
+                                    <code>Bootstrap</code>
+                                </div>
+                                <a href="projects/project-earthhaven.html" class="bfc-link">
+                                    View Project <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="proj-full-card" data-category="WordPress">
+                        <div class="pfc-preview">
+                            <img src="img/panlasa_trip/header.png" alt="PanlasaTrip Portal preview">
+                            <div class="pfc-id">05 / Case_Study</div>
+                        </div>
+                        <div class="pfc-body">
+                            <div class="pfc-top">
+                                <div class="blog-card-meta">
+                                    <span class="blog-tag">WordPress</span>
+                                    <span class="blog-date">2023</span>
+                                </div>
+                                <h2 class="bfc-title">PanlasaTrip Portal</h2>
+                                <p class="bfc-excerpt">A publishing & blog architecture system for a travel and food portal. Built on WordPress with custom post types, editorial workflows, and an optimized front-end reading experience.</p>
+                            </div>
+                            <div class="bfc-bottom">
+                                <div class="bfc-tags">
+                                    <code>WordPress</code>
+                                </div>
+                                <a href="projects/project-panlasa.html" class="bfc-link">
+                                    View Project <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="proj-full-card" data-category="Frontend">
+                        <div class="pfc-preview">
+                            <img src="img/payastreet_img/payastreet.png" alt="PayaStreet Core preview">
+                            <div class="pfc-id">06 / Case_Study</div>
+                        </div>
+                        <div class="pfc-body">
+                            <div class="pfc-top">
+                                <div class="blog-card-meta">
+                                    <span class="blog-tag">Frontend</span>
+                                    <span class="blog-date">2025</span>
+                                </div>
+                                <h2 class="bfc-title">PayaStreet Core</h2>
+                                <p class="bfc-excerpt">Production interface architecture for a street food brand. Custom WordPress build with a focus on brand expression, mobile-first layout, and intuitive navigation hierarchy.</p>
+                            </div>
+                            <div class="bfc-bottom">
+                                <div class="bfc-tags">
+                                    <code>WordPress</code>
+                                </div>
+                                <a href="projects/project-payastreet.html" class="bfc-link">
+                                    View Project <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="proj-full-card" data-category="Fullstack">
+                        <div class="pfc-preview">
+                            <img src="img/aningkabalen_img/home.png" alt="PayaStreet Core preview">
+                            <div class="pfc-id">07 / Case_Study</div>
+                        </div>
+                        <div class="pfc-body">
+                            <div class="pfc-top">
+                                <div class="blog-card-meta">
+                                    <span class="blog-tag">Fullstack</span>
+                                    <span class="blog-date">2026</span>
+                                </div>
+                                <h2 class="bfc-title">AningKabalen</h2>
+                                <p class="bfc-excerpt">A farm-to-table marketplace connecting Pampanga's local farmers directly to buyers and the HORECA industry. Built with Angular, Node.js, and MongoDB — featuring real-time harvest listings, direct ordering, and crop reservation.</p>
+                            </div>
+                            <div class="bfc-bottom">
+                                <div class="bfc-tags">
+                                    <code>Angular</code>
+                                    <code>MongoDB</code>
+                                </div>
+                                <a href="projects/project-payastreet.html" class="bfc-link">
+                                    View Project <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Empty state -->
+                <div class="blog-empty-state" id="emptyState" style="display:none;">
+                    <i class="fas fa-folder-open"></i>
+                    <p>No projects found in this category.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer-section">
+            <div class="footer-container">
+                <div class="footer-cta">
+                    <p class="cta-subtitle">WHAT'S NEXT?</p>
+                    <h2 class="cta-title">
+                        Let's build something <br>
+                        <span class="gradient-text">legendary together.</span>
+                    </h2>
+                    <a href="mailto:m4canlas@gmail.com" class="email-link">
+                        m4canlas@gmail.com <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+
+                <hr class="footer-divider">
+
+                <div class="footer-bottom">
+                    <div class="footer-nav">
+                        <a href="index.html#home">Home</a>
+                        <a href="index.html#about-split">About</a>
+                        <a href="projects.html">Projects</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="index.html#contact">Contact</a>
+                    </div>
+                    <div class="footer-socials">
+                        <a href="https://github.com/TheCanlasArchive" class="social-circle"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/marc-ordonez-canlas-a34320311/" class="social-circle"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/marcordonez.canlas.906" class="social-circle"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-info">
+                    <p class="copyright">© 2026 Marc O. Canlas</p>
+                </div>
+            </div>
+
+            <a href="javascript:void(0)" class="scroll-top" id="scrollTopBtn">
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+        </footer>
+
+        <script src="js/script.js"></script>
+        <script>
+            // Filter logic
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const cards = document.querySelectorAll('.proj-full-card');
+            const countEl = document.getElementById('projectCount');
+            const emptyEl = document.getElementById('emptyState');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filter = btn.dataset.filter;
+                    let visible = 0;
+
+                    cards.forEach(card => {
+                        const match = filter === 'all' || card.dataset.category === filter;
+                        card.style.display = match ? '' : 'none';
+                        if (match) visible++;
+                    });
+
+                    countEl.textContent = visible;
+                    emptyEl.style.display = visible === 0 ? 'flex' : 'none';
+                });
+            });
+        </script>
+    </body>
+</html>
